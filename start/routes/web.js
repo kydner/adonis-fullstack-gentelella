@@ -18,14 +18,16 @@
 const Route = use('Route')
 const $route = require('./../../constants/Route')
 Route.group(() => {
-  Route.get('login', 'UserController.index').as($route.LOGIN).middleware(['redirectIfAuth'])
-  Route.post('login', 'UserController.login').as($route.POST_LOGIN)
-  Route.get('/logout', 'UserController.logout').as($route.LOGOUT)
+  Route.get('login', 'AuthController.index').as($route.LOGIN).middleware(['redirectIfAuth'])
+  Route.post('login', 'AuthController.login').as($route.POST_LOGIN)
+  Route.get('/logout', 'AuthController.logout').as($route.LOGOUT)
 })
 
 Route.group(() => {
-  Route.get('/', 'DashboardController.index').as('admin.dashboard')
-  Route.get('users/:id', 'UserController.index')
+  Route.get('/', 'DashboardController.index').as($route.ADMIN_DASHBOARD)
+  Route.get('/user/', 'UserController.index').as($route.ADMIN_USER_LIST)
+  Route.get('/user/form', 'UserController.form').as($route.ADMIN_USER_FORM)
+  Route.get('/user/:id', 'UserController.getOne')
 })
   .prefix('administrator')
   .middleware(['redirectIfNoAuth', 'auth'])

@@ -1,3 +1,4 @@
+const $route = require('./../constants/Route')
 exports.sideMenu = [
   {
     id: 1,
@@ -25,13 +26,14 @@ exports.sideMenu = [
             id: 1,
             title: 'Baru',
             icon: null,
-            route: 'admin.user',
+            route: $route.ADMIN_USER_FORM,
             link: 'user'
           },
           {
             id: 2,
             title: 'List',
-            icon: null
+            icon: null,
+            route: $route.ADMIN_USER_LIST
           }
         ]
       }

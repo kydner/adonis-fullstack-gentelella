@@ -1,20 +1,15 @@
+/* eslint-disable no-undef */
 'use strict'
 
-const $route = require('./../../../constants/Route')
+const User = use('App/Models/User')
+// const $route = require('./../../../constants/Route')
 class UserController {
   index ({ view, auth, params }) {
-    return view.render('login/index', { title: 'test' })
+    return view.render('administrator/pages/user/list', { title: 'test' })
   }
 
-  async login ({ auth, request, response }) {
-    const { username, password } = request.all()
-    await auth.attempt(username, password)
-    return response.route($route.ADMIN_DASHBOARD)
-  }
-
-  async logout ({ auth, response }) {
-    await auth.logout()
-    return response.route('login')
+  form ({ view, auth, params }) {
+    return view.render('administrator/pages/user/form', { title: 'test' })
   }
 
   getAll ({ auth, params }) {
@@ -22,6 +17,17 @@ class UserController {
       return "You cannot see someone else's profile"
     }
     return auth.user
+  }
+
+  async getOne ({ response, params }) {
+    try {
+      const { id } = params
+      const data = await User.find(id)
+      if (data) return response.status(200).json(data)
+      return response(501).json(null)
+    } catch (error) {
+      response.status(500).json(error)
+    }
   }
 }
 

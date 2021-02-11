@@ -10,7 +10,7 @@
     <title> test | {{ title }}</title>
 
     <!-- Bootstrap -->
-    <link href="{{ assetsUrl('assets') }}/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ assetsUrl('assets') }}/vendors/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="{{ assetsUrl('assets') }}/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
@@ -37,7 +37,7 @@
             <div class="clearfix"></div>
 
             <!-- menu profile quick info -->
-            @!component('administrator.components.app.profile')
+            @!component('administrator.components.app.profile', { auth })
             <!-- /menu profile quick info -->
 
             <br />
@@ -75,7 +75,7 @@
     <!-- jQuery -->
     <script src="{{ assetsUrl('assets') }}/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="{{ assetsUrl('assets') }}/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="{{ assetsUrl('assets') }}/vendors/bootstrap/dist/js/bootstrap.js"></script>
     <!-- FastClick -->
     <script src="{{ assetsUrl('assets') }}/vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
