@@ -1,0 +1,65 @@
+'use strict'
+module.exports = {
+  // table
+  TBL_USERS: 'users',
+  TBL_TOKENS: 'tokens',
+  TBL_ACCOUNTS: 'accounts',
+  TBL_MEDIAS: 'media',
+  TBL_PROFILES: 'profiles',
+  // field
+  COL_ID: 'id',
+  COL_CODE: 'code',
+  COL_NAME: 'name',
+  COL_PARTNER_NAME: 'partner_name',
+  COL_FULL_NAME: 'full_name',
+  COL_DATE: 'date',
+  COL_ADDRESS: 'address',
+  COL_HAS_READ: 'has_read',
+  COL_READ: 'read',
+  COL_DATE_TIME: 'date_time',
+  COL_FROM_DATE: 'from_date',
+  COL_IS_ACTIVE: 'is_active',
+  COL_IS_DEFAULT: 'is_default',
+  COL_TO_DATE: 'to_date',
+  COL_NUMBER_ID: 'number_id',
+  COL_PARENT_ID: 'parent_id',
+  COL_DESCRIPTION: 'description',
+  COL_CREATED_AT: 'created_at',
+  COL_CREATED_BY: 'created_by',
+  COL_UPDATED_AT: 'updated_at',
+  COL_UPDATED_BY: 'updated_by',
+  // user
+  COL_USER_ID: 'user_id',
+  COL_USERNAME: 'username',
+  COL_FIRST_NAME: 'first_name',
+  COL_LAST_NAME: 'last_name',
+  COL_EMAIL: 'email',
+  COL_PASSWORD: 'password',
+  // token
+  COL_TOKEN_ID: 'token_id',
+  COL_TOKEN: 'token',
+  COL_TYPE: 'type',
+  COL_IS_REVOKED: 'is_revoked',
+  // account
+  COL_ACCOUNT_ID: 'account_id',
+  COL_ACCOUNT_TYPE: 'account_type',
+
+  // media
+  COL_MEDIA_ID: 'media_id',
+  COL_FILE_NAME: 'file_name',
+  COL_CONTENT_TYPE: 'content_type',
+
+  // profile
+  COL_PROFILE_ID: 'profile_id',
+  COL_BOY_FIRST_NAME: 'boy_first_name',
+  COL_BOY_LAST_NAME: 'boy_last_name',
+  COL_GIRL_FIRST_NAME: 'girl_first_name',
+  COL_GIRL_LAST_NAME: 'girl_last_name',
+  COL_BOY_FATHER_NAME: 'boy_father_name',
+  COL_BOY_MOTHER_NAME: 'boy_mother_name',
+  COL_GIRL_FATHER_NAME: 'girl_father_name',
+  COL_GIRL_MOTHER_NAME: 'girl_mother_name',
+  COL_WEDDING_ADDRESS: 'wedding_address',
+  COL_RECEPTION_DATE: 'reception_date',
+  COL_MARRIAGE_CONTRACT_DATE: 'marriage_contract_date', // akad pernikahan
+}
