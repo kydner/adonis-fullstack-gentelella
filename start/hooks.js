@@ -5,7 +5,7 @@ const $layout = require('./../constants/Layout')
 hooks.after.providersBooted(() => {
   const View = use('Adonis/Src/View')
   View.global('appTitle', () => 'Website ABC')
-  View.global('menus', () => $layout.sideMenu)
+  View.global('sideMenus', $layout.sideMenu)
   View.global('test', () => new Date())
   View.global('$route', $route)
 })
