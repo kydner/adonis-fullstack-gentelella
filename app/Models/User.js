@@ -1,11 +1,9 @@
 /* eslint-disable no-undef */
 'use strict'
 
-/** @type {import('@adonisjs/framework/src/Hash')} */
-const Hash = use('Hash')
-
-/** @type {typeof import('@adonisjs/lucid/src/Lucid/Model')} */
 const Model = use('Model')
+const $db = require('./../../constants/database')
+const Hash = use('Hash')
 
 class User extends Model {
   static boot () {
@@ -21,6 +19,14 @@ class User extends Model {
         userInstance.password = await Hash.make(userInstance.password)
       }
     })
+  }
+
+  static get incrementing () {
+    return false
+  }
+
+  static get hidden () {
+    return [$db.COL_PASSWORD]
   }
 
   /**
